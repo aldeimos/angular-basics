@@ -1,0 +1,7 @@
+<div class="post">
+  <h2 class="post__title">{{post.title}}</h2>
+<!--  принимаем входящий параметр и внутри определяем, как он будет отображаться-->
+  <p class="post__text">{{post.text}}</p>
+  <button (click)="removePost()">&times</button>
+  <ng-content></ng-content>
+</div>

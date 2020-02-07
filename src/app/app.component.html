@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Angular Components</h1>
+
+  <app-post-form (Add)="updatePosts($event)">
+  </app-post-form>
+
+  <hr>
+
+  <app-post *ngFor="let post of posts" [post]="post" (Remove)="removePost($event)">
+<!--    итерируеися по массиву post и передаем внутрь него параметр post, который определелили у компонента в app.component.ts-->
+    <div #info>
+      <small *ngIf="post.text.length > 10; else short">Пост Длинный</small>
+      <ng-template #short>Пост короткий</ng-template>
+      <!--Тут мы передаем внутрь компонента какую-то логику снаружи -->
+    </div>
+  </app-post>
+</div>

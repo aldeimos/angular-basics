@@ -1,0 +1,7 @@
+<div class="form">
+  <input type="text" minlength="1" class="form__control" placeholder="Title" [(ngModel)]="title" #titleInput>
+  <input type="text" minlength="1" class="form__control" placeholder="Text" [(ngModel)]="text">
+
+  <button class="btn" (click)="addPost()">Добавить пост</button>
+  <button (click)="focusTitle()">Focus input title</button>
+</div>
